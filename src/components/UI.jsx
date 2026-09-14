@@ -1,0 +1,6 @@
+import {motion} from 'framer-motion'; import {Link} from 'react-router-dom'; import {useLanguage} from '../i18n';
+export const Reveal=({children,className=''})=><motion.div className={className} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.18}} transition={{duration:.65}}>{children}</motion.div>;
+export const Eyebrow=({children})=><div className="eyebrow">{children}</div>;
+export const SectionTitle=({eyebrow,title,text})=><Reveal><Eyebrow>{eyebrow}</Eyebrow><h2>{title}</h2>{text&&<p className="lead">{text}</p>}</Reveal>;
+export const CTA=({title,text})=>{const{t}=useLanguage();return <section className="cta"><Reveal><Eyebrow>{t('HABLEMOS','LET’S TALK')}</Eyebrow><h2>{title||t('¿Tienes un desafío geoespacial?','Do you have a geospatial challenge?')}</h2><p>{text||t('Cuéntanos qué necesitas monitorear, detectar, automatizar o construir.','Tell us what you need to monitor, detect, automate or build.')}</p><Link className="btn" to="/contacto">{t('Hablemos de tu proyecto','Tell us about your project')} →</Link></Reveal></section>}
+export const Media=({src,type='image',alt='',className=''})=>type==='video'?<video className={'media '+className} src={src} autoPlay muted loop playsInline/>:<img className={'media '+className} src={src} alt={alt} loading="lazy"/>;
