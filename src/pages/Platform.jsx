@@ -49,7 +49,7 @@ const principles=[t('No-Code y workflows guiados','No-Code and guided workflows'
 
         <video
           className="workflow-video"
-          src={s[3]}
+          src={assetPath(s[3])}
           muted
           autoPlay
           loop
