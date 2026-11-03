@@ -82,12 +82,17 @@ export default function SEO() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const seo = seoByPath[pathname] || seoByPath['/'];
+    const normalizedPath =
+      pathname === '/'
+        ? '/'
+        : pathname.replace(/\/+$/, '');
+
+    const seo = seoByPath[normalizedPath] || seoByPath['/'];
 
     const canonicalUrl =
-      pathname === '/'
+      normalizedPath === '/'
         ? `${SITE_URL}/`
-        : `${SITE_URL}${pathname}`;
+        : `${SITE_URL}${normalizedPath}/`;
 
     document.title = seo.title;
 
