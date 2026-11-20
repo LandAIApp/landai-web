@@ -52,7 +52,7 @@ const seoByPath = {
   '/labs': {
     title: 'Land AI Labs | Aplicaciones GeoAI',
     description:
-      'Prototipos y aplicaciones geoespaciales de Land AI Labs para Observación de la Tierra, GeoAI, análisis de cambios, incendios y analítica espacial.',
+      'Aplicaciones GeoAI de Land AI Labs para análisis multiamenaza, incendios, inundaciones, exposición territorial, detección de cambios y Observación de la Tierra.',
   },
 
   '/privacidad': {

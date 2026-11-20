@@ -23,24 +23,24 @@ export default function Labs(){
         <div className="labs-grid">
           <article className="lab-card">
             <div className="tags">
-              <span>Sentinel-2</span>
-              <span>VIIRS</span>
+              <span>Multi-Hazard</span>
+              <span>Sentinel-1/2</span>
               <span>GeoAI</span>
               <span>Earth Engine</span>
             </div>
 
-            <h2>Wildfire Intelligence</h2>
+            <h2>Multi-Hazard Intelligence</h2>
 
             <p>
               {t(
-                'Evaluación preliminar de áreas afectadas por incendios mediante Sentinel-2, VIIRS y GeoAI.',
-                'Preliminary wildfire impact assessment using Sentinel-2, VIIRS and GeoAI.'
+                'Evaluación preliminar de amenazas y exposición territorial mediante Observación de la Tierra y GeoAI. Integra análisis de incendios e inundaciones con edificaciones, vías, equipamientos y población potencialmente expuesta.',
+                'Preliminary hazard and territorial exposure assessment using Earth Observation and GeoAI. Integrates wildfire and flood analysis with buildings, roads, facilities and potentially exposed population.'
               )}
             </p>
 
             <a
               className="btn"
-              href="https://landaiapp.github.io/landai-wildfire/"
+              href="https://landaiapp.github.io/landai-multihazard/"
               target="_blank"
               rel="noopener noreferrer"
             >
